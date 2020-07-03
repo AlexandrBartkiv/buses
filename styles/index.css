@@ -1,0 +1,128 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+}
+
+body > .banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/road.png);
+  height: 100vh;
+  opacity: 0.7;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body > .banner > .header {
+  height: 200px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: whitesmoke;
+  opacity: 0.8;
+  -webkit-box-shadow: -118px 65px 44px whitesmoke, 118px 65px 44px whitesmoke;
+          box-shadow: -118px 65px 44px whitesmoke, 118px 65px 44px whitesmoke;
+  z-index: 2;
+}
+
+body > .banner > .header > .logo {
+  margin-left: 150px;
+  height: 60%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/hotpng.com.png);
+}
+
+body > .banner > .header > .nav {
+  font-size: 17px;
+  font-weight: 700;
+  color: black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body > .banner > .tickets {
+  margin-top: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  z-index: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body > .banner > .tickets > .buttn_up {
+  height: 50px;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body > .banner > .tickets > .buttn_up > div {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 9px;
+          box-shadow: 0px 2px 9px;
+  font-size: 17px;
+  font-weight: 700;
+  margin-left: 35px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+body > .banner > .tickets > .search_area {
+  background-color: #17A607;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 10px;
+}
+
+body > .banner > .tickets > .search_area > input {
+  border: none;
+  height: 45%;
+}
+
+body > .banner > .alert {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #069C79;
+}
+/*# sourceMappingURL=index.css.map */

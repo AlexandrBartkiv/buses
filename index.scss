@@ -34,9 +34,12 @@ body{
         height: 100vh;
         opacity: 0.7;
         justify-content: center;
-        @media (max-width: 414px){
+        @media (min-width: 321px) and (max-width: 414px){
             padding: 0;
             height: 150vh;
+        }
+        @media (max-width: 320px){
+            height: 170vh;
         }
         &>.header{
             height: 200px;
@@ -235,7 +238,7 @@ body{
             justify-content: space-around;
             @include secondary();  
             @media (max-width: 414px){
-                height: 50vh;
+                height: calc(45% - 100px);
                 position: relative;
             }  
             & p{
@@ -273,12 +276,18 @@ body{
         height: 103vh;
         justify-content: flex-start;
         padding: 50px;
+        @media (max-width: 414px){
+            height: max-content;
+        }
         &>h1,h3{
             text-align: center;
             font-weight: 200;
         }
         &>h1{
             margin-top: 30px;
+            @media (max-width: 414px){
+                margin-top: 5px;
+            }
         }
         &>h3{
             margin-top: 30px;
@@ -288,6 +297,9 @@ body{
         &>.glr_block{
             height: 90%;
             margin-top: 35px;
+            @media (max-width: 414px){
+                height: 67%;
+            }
             &>.photos{
                 height: 70%;
                 width: 60%;
@@ -302,6 +314,9 @@ body{
                 grid-template-rows: 1fr 1fr 1fr;
                 grid-template-columns:1fr 1fr 1fr;
                 grid-gap: 5px;
+                @media (max-width: 414px){
+                   display: none; 
+                }
                 &>div{
                     transition: ease 0.2s;
                 }
@@ -342,6 +357,10 @@ body{
                 width: 40%;
                 margin-top: 60px;
                 height: min-content;
+                @media (max-width: 414px){
+                    width: 100%;
+                    margin-top: 10px;
+                }
                 &>a{
                     display: inline-block;
                     width: 80%;
@@ -353,6 +372,10 @@ body{
                     align-items: center;
                     border-bottom: 1px solid rgb(216, 216, 216);
                     transition: ease 0.2s;
+                    @media (max-width: 414px){
+                        margin: auto;
+                        width: 100%;
+                    }
                     &>.col{
                         display: flex;
                         justify-content: space-around;
@@ -369,6 +392,9 @@ body{
                 &>.add_loc{
                     margin-top: 5px;
                     height: 270px;
+                    @media (max-width: 414px){
+                        margin-top: 20px;
+                    }
                     &>.col{
                         display: flex;
                         flex-direction: column;
@@ -400,6 +426,9 @@ body{
         text-align: center;
         padding: 30px;
         background: rgb(241, 241, 241);
+        @media (max-width: 414px){
+            height: 340vh;
+        }
         &>h1,h3{
             font-weight: 300;
         }
@@ -408,6 +437,10 @@ body{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            @media (max-width: 414px){
+                flex-direction: column;
+                align-items: center;
+            }
             &>.new{
                 height: 70%;
                 width: 100px;
@@ -418,6 +451,11 @@ body{
                 flex-wrap: wrap;
                 justify-content: center;
                 position: relative;
+                @media (max-width: 414px){
+                    width: 100%;
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
                 &>.img{
                     background-color: rgb(168, 168, 168);
                     height: 50%;
@@ -470,6 +508,9 @@ body{
     &>.questions{
         height: 100vh;
         justify-content: center;
+        @media (max-width: 414px){
+            height: 150vh;
+        }
         &>h2{
             text-align: center;
             margin-top: 65px;
@@ -479,12 +520,18 @@ body{
         &>.a{
             height: 50%;
             justify-content: space-around;
+            @media (max-width: 414px){
+                height: 100%;
+            }
             &>.card{
                 margin: 20px;
                 height: 75%;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+                @media (max-width: 414px){
+                    height: 30%;
+                }
                 &>img{
                     height: 200px;
                     width: 200px;
@@ -496,9 +543,17 @@ body{
                     font-size: 20px;
                 }
             }
+            &>.card:last-child{
+                @media (max-width: 414px){
+                    margin-bottom: 20px;
+                }
+            }
         }
         &>.b{
             padding: 0 40px;
+            @media (max-width: 414px){
+                display: none;
+            }
             & h2{
                 font-weight: 400;
 
@@ -534,6 +589,10 @@ body{
         background-color: rgb(83, 138, 90);
         margin-top: 55px;
         padding-left: 50px;
+        @media (max-width: 414px){
+            height: max-content;
+            padding-bottom: 10px;
+        }
         &>.row{
             height: 100%;
             align-items: flex-start;
@@ -544,6 +603,9 @@ body{
                 border: 1px solid white;
                 border-top: none;
                 border-bottom: none;
+                @media (max-width: 414px){
+                    border: none;
+                }
                 &>li{
                     color: white;
                     text-decoration: none;
@@ -569,6 +631,9 @@ body{
             &>div{
                 margin-left: 10px;
                 color: white;
+                @media (max-width: 414px){
+                    margin: 0;
+                }
                 & input{
                     height: 50px;
                     border: none;

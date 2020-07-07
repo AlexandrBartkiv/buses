@@ -20,10 +20,16 @@ body > .banner {
           justify-content: center;
 }
 
-@media (max-width: 414px) {
+@media (min-width: 321px) and (max-width: 414px) {
   body > .banner {
     padding: 0;
     height: 150vh;
+  }
+}
+
+@media (max-width: 320px) {
+  body > .banner {
+    height: 170vh;
   }
 }
 
@@ -308,7 +314,7 @@ body > .banner > .alert {
 
 @media (max-width: 414px) {
   body > .banner > .alert {
-    height: 50vh;
+    height: calc(45% - 100px);
     position: relative;
   }
 }
@@ -372,6 +378,14 @@ body > .gallery {
   padding: 50px;
 }
 
+@media (max-width: 414px) {
+  body > .gallery {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+
 body > .gallery > h1, body > .gallery h3 {
   text-align: center;
   font-weight: 200;
@@ -379,6 +393,12 @@ body > .gallery > h1, body > .gallery h3 {
 
 body > .gallery > h1 {
   margin-top: 30px;
+}
+
+@media (max-width: 414px) {
+  body > .gallery > h1 {
+    margin-top: 5px;
+  }
 }
 
 body > .gallery > h3 {
@@ -390,6 +410,12 @@ body > .gallery > h3 {
 body > .gallery > .glr_block {
   height: 90%;
   margin-top: 35px;
+}
+
+@media (max-width: 414px) {
+  body > .gallery > .glr_block {
+    height: 67%;
+  }
 }
 
 body > .gallery > .glr_block > .photos {
@@ -406,6 +432,12 @@ body > .gallery > .glr_block > .photos {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5px;
+}
+
+@media (max-width: 414px) {
+  body > .gallery > .glr_block > .photos {
+    display: none;
+  }
 }
 
 body > .gallery > .glr_block > .photos > div {
@@ -480,6 +512,13 @@ body > .gallery > .glr_block > .table {
   height: min-content;
 }
 
+@media (max-width: 414px) {
+  body > .gallery > .glr_block > .table {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
 body > .gallery > .glr_block > .table > a {
   display: inline-block;
   width: 80%;
@@ -496,6 +535,13 @@ body > .gallery > .glr_block > .table > a {
   border-bottom: 1px solid #d8d8d8;
   -webkit-transition: ease 0.2s;
   transition: ease 0.2s;
+}
+
+@media (max-width: 414px) {
+  body > .gallery > .glr_block > .table > a {
+    margin: auto;
+    width: 100%;
+  }
 }
 
 body > .gallery > .glr_block > .table > a > .col {
@@ -521,6 +567,12 @@ body > .gallery > .glr_block > .table > a:hover {
 body > .gallery > .glr_block > .table > .add_loc {
   margin-top: 5px;
   height: 270px;
+}
+
+@media (max-width: 414px) {
+  body > .gallery > .glr_block > .table > .add_loc {
+    margin-top: 20px;
+  }
 }
 
 body > .gallery > .glr_block > .table > .add_loc > .col {
@@ -566,6 +618,12 @@ body > .news {
   background: #f1f1f1;
 }
 
+@media (max-width: 414px) {
+  body > .news {
+    height: 340vh;
+  }
+}
+
 body > .news > h1, body > .news h3 {
   font-weight: 300;
 }
@@ -579,6 +637,18 @@ body > .news > .row {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media (max-width: 414px) {
+  body > .news > .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 body > .news > .row > .new {
@@ -596,6 +666,14 @@ body > .news > .row > .new {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+}
+
+@media (max-width: 414px) {
+  body > .news > .row > .new {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
 }
 
 body > .news > .row > .new > .img {
@@ -670,6 +748,12 @@ body > .questions {
           justify-content: center;
 }
 
+@media (max-width: 414px) {
+  body > .questions {
+    height: 150vh;
+  }
+}
+
 body > .questions > h2 {
   text-align: center;
   margin-top: 65px;
@@ -681,6 +765,12 @@ body > .questions > .a {
   height: 50%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media (max-width: 414px) {
+  body > .questions > .a {
+    height: 100%;
+  }
 }
 
 body > .questions > .a > .card {
@@ -697,6 +787,12 @@ body > .questions > .a > .card {
           justify-content: flex-start;
 }
 
+@media (max-width: 414px) {
+  body > .questions > .a > .card {
+    height: 30%;
+  }
+}
+
 body > .questions > .a > .card > img {
   height: 200px;
   width: 200px;
@@ -709,8 +805,20 @@ body > .questions > .a > .card > p {
   font-size: 20px;
 }
 
+@media (max-width: 414px) {
+  body > .questions > .a > .card:last-child {
+    margin-bottom: 20px;
+  }
+}
+
 body > .questions > .b {
   padding: 0 40px;
+}
+
+@media (max-width: 414px) {
+  body > .questions > .b {
+    display: none;
+  }
 }
 
 body > .questions > .b h2 {
@@ -760,6 +868,15 @@ body > .footer {
   padding-left: 50px;
 }
 
+@media (max-width: 414px) {
+  body > .footer {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding-bottom: 10px;
+  }
+}
+
 body > .footer > .row {
   height: 100%;
   -webkit-box-align: start;
@@ -774,6 +891,12 @@ body > .footer > .row > ul {
   border: 1px solid white;
   border-top: none;
   border-bottom: none;
+}
+
+@media (max-width: 414px) {
+  body > .footer > .row > ul {
+    border: none;
+  }
 }
 
 body > .footer > .row > ul > li {
@@ -805,6 +928,12 @@ body > .footer > .row > .last {
 body > .footer > .row > div {
   margin-left: 10px;
   color: white;
+}
+
+@media (max-width: 414px) {
+  body > .footer > .row > div {
+    margin: 0;
+  }
 }
 
 body > .footer > .row > div input {

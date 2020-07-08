@@ -118,6 +118,10 @@ body > .banner > .header > .nav {
   }
 }
 
+body > .banner > .header > .nav > span:hover {
+  cursor: pointer;
+}
+
 body > .banner > .header > .nav > .supp::before {
   content: '';
   display: inline-block;
@@ -215,6 +219,8 @@ body > .banner > .tickets > .buttn_up > div {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 10px;
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
 }
 
 @media (max-width: 414px) {
@@ -232,6 +238,14 @@ body > .banner > .tickets > .buttn_up > div {
     color: white;
     height: 100%;
   }
+}
+
+body > .banner > .tickets > .buttn_up > div:hover {
+  cursor: pointer;
+  background-color: #068d06;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 @media (max-width: 414px) {
@@ -272,7 +286,7 @@ body > .banner > .tickets > .search_area {
 
 body > .banner > .tickets > .search_area > input {
   border: none;
-  height: 25%;
+  height: 50%;
   outline: none !important;
 }
 
@@ -291,7 +305,7 @@ body > .banner > .tickets > .search_area > .btt {
 }
 
 body > .banner > .tickets > .search_area > .btt:hover {
-  background-color: #2ef114;
+  background-color: #148b04;
   color: white;
 }
 

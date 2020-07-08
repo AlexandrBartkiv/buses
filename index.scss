@@ -95,6 +95,9 @@ body{
                         display: none;
                     }
                 }
+                &>span:hover{
+                    cursor: pointer;
+                }
                 &>.supp::before{
                     content: '';
                     display: inline-block;
@@ -112,7 +115,6 @@ body{
                 &>.lang::before{
                     display: inline-block;
                     position: relative;
-                    // background: ;
                 }
                 &>.cab::before{
                     content: '';
@@ -164,6 +166,7 @@ body{
                     justify-content: center;
                     align-items: center;
                     margin-bottom: 10px;
+                    transition: ease 0.2s;
                     @media (max-width: 414px){
                         font-size: 15px; 
                         border-radius: 0;
@@ -175,6 +178,12 @@ body{
                         color: white;
                         height: 100%;
                     }
+                }
+                &>div:hover{
+                    cursor: pointer;
+                    background-color: rgb(6, 141, 6);
+                    color: white;
+                    box-shadow: none;
                 }
                 &>div:first-child{
                     @media (max-width: 414px){
@@ -205,7 +214,7 @@ body{
                 }
                 &>input{
                     border: none;
-                    height: 25%;
+                    height: 50%;
                     outline: none !important;
                     @media (max-width: 414px){
                         padding-left: 30px;
@@ -219,7 +228,7 @@ body{
                     border: none;
                 }
                 &>.btt:hover{
-                    background-color: rgb(46, 241, 20);
+                    background-color: rgb(20, 139, 4);
                     color: white;
                 }
                 &>.btt:active{

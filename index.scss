@@ -203,18 +203,88 @@ body{
 
                 }
             }
+            &>.autocomplete-wraper{
+                position: relative;
+                width: 100%;
+                height: max-content;
+                display: flex;
+                justify-content: start;
+                display: flex;
+                justify-content: start;
+                align-items: start;
+                &>.top{
+                    height: min-content;
+                    width: 100%;
+                    padding: 10px;
+                    background-color: rgb(221, 221, 221);
+                }
+                &>.autocomplete-items{
+                    position: relative;
+                    width: 300px;
+                    padding: 10px;
+                    background: white;
+                    color: #065904;
+                    border-bottom: 1px solid grey;
+                    bottom: 10px;
+                    right: 3px ;
+                    &>.autocomplete-active{
+                        background-color: #0cbd09;
+                        color: white;
+                        padding: 3px;
+                    }
+                }
+                
+            }
             &>.search_area{
                 @include primary();
-                height: 100px;
+                height: 150px;
                 align-items: center;
                 justify-content: space-around;
                 border-radius: 10px;
+                padding: 10px;
                 @media (max-width: 414px){
                     height: 87%;
                 }
+                &>#date{
+                    font-weight: 700;
+                }
+                &>.swipe{
+                    background-image: url(../img/compare_arrows.png);
+                    height: 20px;
+                    width: 26px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                &>.swipe:hover{
+                    cursor: pointer;
+                }
+                &>.alrt_from{
+                    background-color: pink;
+                    color: red;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    width: 100%;
+                    border-radius: 6px;
+                    top: 6px;
+                    font-weight: 600;
+                }
+                &>.alrt_to{
+                    background-color: pink;
+                    color: red;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    width: 100%;
+                    border-radius: 6px;
+                    top: 6px;
+                    font-weight: 600;
+                }
                 &>input{
                     border: none;
-                    height: 50%;
+                    height: 30%;
                     outline: none !important;
                     @media (max-width: 414px){
                         padding-left: 30px;
@@ -234,7 +304,10 @@ body{
                 &>.btt:active{
                     background-color: rgb(142, 248, 129);
                 }
+                
+                
             }
+            
         }
         &>.alert{
             position: absolute;

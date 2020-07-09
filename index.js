@@ -9,34 +9,44 @@ console.log('hi')
 
 
 inp = document.querySelector('#from')
+inp_to = document.querySelector('#to')
 function autocomp(inp, arr) {
 
   var currentFocus;
 
   inp.addEventListener("input", function(e) {
       var a, b, i, val = this.value;
-      arr = ["Киев","Львов","Одесса"];
+      arr = ["Киев","Львов","Одесса","Огород","Луганск","Кривой-рог"];
       closeAllLists();
       if (!val) { return false;}
       currentFocus = -1;
 
-      a = document.createElement("DIV");
+      a = document.createElement("div");
+      wrap = document.createElement("div")
+      topp = document.createElement("div")
+  
       a.setAttribute("id", this.id + "autocomplete-list");
       a.setAttribute("class", "autocomplete-items");
-
-      this.parentNode.appendChild(a);
+      wrap.setAttribute("class", "autocomplete-wraper");
+      console.log(wrap)
+      // console.log(topp)
+      // topp.setAttribute("class", "top");
+      // topp.append("Для поиска введите необходимый город");
+      // wrap.append(top)
+      wrap.appendChild(a);
+      document.querySelector('.tickets').appendChild(wrap);
+      
 
       for (i = 0; i < arr.length; i++) {
 
         if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
 
-          b = document.createElement("DIV");
+          b = document.createElement("div");
 
           b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
           b.innerHTML += arr[i].substr(val.length);
 
           b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-
               b.addEventListener("click", function(e) {
 
               inp.value = this.getElementsByTagName("input")[0].value;
@@ -49,7 +59,9 @@ function autocomp(inp, arr) {
 
   inp.addEventListener("keydown", function(e) {
       var x = document.getElementById(this.id + "autocomplete-list");
+      console.log(x)
       if (x) x = x.getElementsByTagName("div");
+      console.log(x)
       if (e.keyCode == 40) {
 
         currentFocus++;
@@ -100,8 +112,55 @@ document.addEventListener("click", function (e) {
 });
 }
 
-autocomp(inp);
 
+
+autocomp(inp);
+autocomp(inp_to);
+
+
+$('#from').blur(()=>{
+  console.log('alrt_from')
+  if (inp.value == ""){
+    
+    $('.alrt_from').css({'display':'flex'})
+  }
+});
+$('#from').on('keyup',()=>{
+
+  if (inp.value){
+    $('.alrt_from').css({'display':'none'})
+  }
+  else{
+    $('.alrt_from').css({'display':'flex'})
+  }
+})
+
+
+$('#to').blur(()=>{
+  console.log('alrt_to')
+  if (inp_to.value == ""){
+  
+    $('.alrt_to').css({'display':'flex'})
+  }
+});
+$('#to').on('keyup',()=>{
+
+  if (inp_to.value){
+    $('.alrt_to').css({'display':'none'})
+  }
+  else{
+    $('.alrt_to').css({'display':'flex'})
+  }
+})
+
+
+$('.swipe').click(function(){
+   from = $('#from').val()
+   to = $('#to').val()
+
+  $('#to').val(from)
+  $('#from').val(to) 
+})
 
 
 
@@ -124,13 +183,13 @@ $.datepicker.regional['ru'] = {
     currentText: 'Сегодня',
     monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
     'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-    monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
-    'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    monthNamesShort: ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня',
+    'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'],
     dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
     dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
     weekHeader: 'Нед',
-    dateFormat: 'dd.mm.yy',
+    dateFormat: 'dd M, D.',
     firstDay: 1,
     isRTL: false,
     showMonthAfterYear: false,
@@ -139,7 +198,7 @@ $.datepicker.regional['ru'] = {
 $.datepicker.setDefaults($.datepicker.regional['ru']);
 
 $('#date').datepicker({
-})
+});   
 
 $('#sub').inputmask({
     mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",

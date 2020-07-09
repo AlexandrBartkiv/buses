@@ -267,15 +267,61 @@ body > .banner > .tickets > .buttn_up > div:hover {
   }
 }
 
+body > .banner > .tickets > .autocomplete-wraper {
+  position: relative;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  display: flex;
+  justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+body > .banner > .tickets > .autocomplete-wraper > .top {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: 100%;
+  padding: 10px;
+  background-color: #dddddd;
+}
+
+body > .banner > .tickets > .autocomplete-wraper > .autocomplete-items {
+  position: relative;
+  width: 300px;
+  padding: 10px;
+  background: white;
+  color: #065904;
+  border-bottom: 1px solid grey;
+  bottom: 10px;
+  right: 3px;
+}
+
+body > .banner > .tickets > .autocomplete-wraper > .autocomplete-items > .autocomplete-active {
+  background-color: #0cbd09;
+  color: white;
+  padding: 3px;
+}
+
 body > .banner > .tickets > .search_area {
   background-color: #13c200;
-  height: 100px;
+  height: 150px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   border-radius: 10px;
+  padding: 10px;
 }
 
 @media (max-width: 414px) {
@@ -284,9 +330,59 @@ body > .banner > .tickets > .search_area {
   }
 }
 
+body > .banner > .tickets > .search_area > #date {
+  font-weight: 700;
+}
+
+body > .banner > .tickets > .search_area > .swipe {
+  background-image: url(../img/compare_arrows.png);
+  height: 20px;
+  width: 26px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body > .banner > .tickets > .search_area > .swipe:hover {
+  cursor: pointer;
+}
+
+body > .banner > .tickets > .search_area > .alrt_from {
+  background-color: pink;
+  color: red;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+  border-radius: 6px;
+  top: 6px;
+  font-weight: 600;
+}
+
+body > .banner > .tickets > .search_area > .alrt_to {
+  background-color: pink;
+  color: red;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+  border-radius: 6px;
+  top: 6px;
+  font-weight: 600;
+}
+
 body > .banner > .tickets > .search_area > input {
   border: none;
-  height: 50%;
+  height: 30%;
   outline: none !important;
 }
 

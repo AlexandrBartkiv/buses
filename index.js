@@ -117,6 +117,29 @@ document.addEventListener("click", function (e) {
 autocomp(inp);
 autocomp(inp_to);
 
+$('.btt').click(function(){
+
+  inpForm = $('#from, #to, #date'), form={};
+  console.log(inpForm)
+  for ( i = 0; i<inpForm.length; i++){
+    var arr = inpForm[i].name, tmp = form;
+    console.log(arr)
+    for( k=1;k<arr.length-1;k++){
+      !tmp[arr[k]] && (tmp[arr[k]] = {}); tmp = tmp[arr[k]]
+    }
+    tmp[arr[k]] = inpForm[i].value
+  }
+  console.log(form)
+})
+
+
+
+
+
+
+
+
+
 
 $('#from').blur(()=>{
   console.log('alrt_from')

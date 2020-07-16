@@ -117,19 +117,38 @@ document.addEventListener("click", function (e) {
 autocomp(inp);
 autocomp(inp_to);
 
+
+
 $('.btt').click(function(){
 
-  inpForm = $('#from, #to, #date'), form={};
+  inpForm = $('#from, #to, #date'), 
+  form={};
   console.log(inpForm)
   for ( i = 0; i<inpForm.length; i++){
-    var arr = inpForm[i].name, tmp = form;
+    var arr = inpForm[i].name, 
+    tmp = form;
     console.log(arr)
-    for( k=1;k<arr.length-1;k++){
-      !tmp[arr[k]] && (tmp[arr[k]] = {}); tmp = tmp[arr[k]]
-    }
-    tmp[arr[k]] = inpForm[i].value
+  for( k = 0; k<arr.length;k++){
+    tmp[arr] = inpForm[i].value
   }
-  console.log(form)
+  }
+  // console.log(form)
+  
+ 
+
+  $.ajax({
+    url: '/app.js',
+    type: 'POST',
+    data: JSON.stringify(form),
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    async: false,
+    success: function() {
+        console.log(response);
+    }
+});
+
+
 })
 
 

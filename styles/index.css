@@ -43,8 +43,10 @@ body > .banner > .header {
           align-items: center;
   background-color: whitesmoke;
   opacity: 0.8;
-  -webkit-box-shadow: -118px 65px 44px whitesmoke, 118px 65px 44px whitesmoke;
-          box-shadow: -118px 65px 44px whitesmoke, 118px 65px 44px whitesmoke;
+  -webkit-box-shadow: -118px 65px 44px whitesmoke,
+ 118px 65px 44px whitesmoke;
+          box-shadow: -118px 65px 44px whitesmoke,
+ 118px 65px 44px whitesmoke;
   z-index: 2;
 }
 
@@ -536,7 +538,9 @@ body > .gallery > .glr_block > .photos {
   margin-top: 60px;
   margin-right: 0;
   padding: 5px;
-      grid-template-areas: "a a b" "c d e" "f g e";
+      grid-template-areas: "a a b"
+ "c d e"
+ "f g e";
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -1061,4 +1065,3 @@ body > .footer > .row > div .bttn {
   font-size: 20px;
   background-color: #13c200;
 }
-/*# sourceMappingURL=index.css.map */

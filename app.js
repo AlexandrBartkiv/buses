@@ -1,7 +1,10 @@
 const express = require("express");
- 
+var cors = require('cors')
 const app = express();
 const jsonParser = express.json();
+
+
+app.use(cors())
 
 app.use(express.static(__dirname))
 
@@ -17,6 +20,5 @@ app.use(function (request, response) {
   
   response.sendFile(__dirname + "./index.html");
   });
-
 
 app.listen(4000);

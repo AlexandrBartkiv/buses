@@ -134,22 +134,34 @@ $('.btt').click(function(){
   }
   // console.log(form)
   
- 
-
-  $.ajax({
-    url: '/app.js',
-    type: 'POST',
-    data: JSON.stringify(form),
-    contentType: 'application/json; charset=utf-8',
-    dataType: 'json',
-    async: false,
-    success: function() {
-        console.log(response);
-    }
-});
 
 
+//   $.ajax({
+//     url: 'C:/Users/User/Desktop/Bus/index.html',
+//     type: 'POST',
+//     data: JSON.stringify(form),
+//     contentType: 'application/json; charset=utf-8',
+//     dataType: 'json',
+//     async: false,
+//     success: function() {
+//         console.log(response);
+//     }
+// });
+
+ axios({
+      method: 'POST',
+      url: 'app.js',
+      data: JSON.stringify(form)
+      // contentType: 'application/json; charset=utf-8',
+      // dataType: 'json'
+ })
+ .then(response => { 
+	console.log(response)
 })
+.catch(error => {
+    console.log('err')
+});
+})  
 
 
 
